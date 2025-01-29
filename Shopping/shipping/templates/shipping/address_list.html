@@ -1,0 +1,9 @@
+<h1>Your Addresses</h1>
+<ul>
+    {% for address in addresses %}
+    <li>
+        {{ address.full_name }} - {{ address.street_address }}, {{ address.city }}, {{ address.state }} - {{ address.postal_code }}
+        <br>Phone: {{ address.phone }}
+    </li>
+    {% endfor %}
+</ul>

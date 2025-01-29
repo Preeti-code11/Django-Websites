@@ -1,0 +1,25 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome to the Shop</h1>
+    <p>We offer a variety of products!</p>
+
+    <h3>Currencies:</h3>
+    <ul>
+        {% for currency in currencies %}
+            <li>{{ currency }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Languages:</h3>
+    <ul>
+        {% for language in languages %}
+            <li>{{ language }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

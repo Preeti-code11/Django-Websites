@@ -1,0 +1,15 @@
+<h2>My Wishlist</h2>
+<ul>
+    {% for item in wishlist_items %}
+        <li>
+            {{ item.product.title }}
+            <a href="{% url 'remove_from_wishlist' item.product.id %}">Remove</a>
+        </li>
+    {% empty %}
+        <p>Your wishlist is empty!</p>
+    {% endfor %}
+</ul>
+
+
+<a href="{% url 'add_to_wishlist' product.id %}">Add to Wishlist</a>
+<a href="{% url 'remove_from_wishlist' product.id %}">Remove from Wishlist</a>

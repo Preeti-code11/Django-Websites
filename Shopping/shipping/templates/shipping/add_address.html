@@ -1,0 +1,25 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="full_name">Full Name:</label>
+    <input type="text" name="full_name" required><br>
+    
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" required><br>
+    
+    <label for="street_address">Street Address:</label>
+    <textarea name="street_address" required></textarea><br>
+    
+    <label for="city">City:</label>
+    <input type="text" name="city" required><br>
+    
+    <label for="state">State:</label>
+    <input type="text" name="state" required><br>
+    
+    <label for="postal_code">Postal Code:</label>
+    <input type="text" name="postal_code" required><br>
+    
+    <label for="country">Country:</label>
+    <input type="text" name="country" value="India"><br>
+    
+    <button type="submit">Add Address</button>
+</form>

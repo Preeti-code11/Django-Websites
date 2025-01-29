@@ -1,0 +1,8 @@
+<h1>Your Orders</h1>
+<ul>
+    {% for order in orders %}
+        <li>
+            {{ order.product.title }} - {{ order.quantity }} pcs - {{ order.status }}
+        </li>
+    {% endfor %}
+</ul>
